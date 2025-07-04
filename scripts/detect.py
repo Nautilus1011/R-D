@@ -36,4 +36,4 @@ for det in outputs[0]:
                     cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0,255,0), 2)
         
 cv2.imwrite(os.path.join(save_path, "result.jpg"), image)
-print("物体検出完了! -> result.jpg に保存")
+print("物体検出完了! -> result.jpg に保存しました")
