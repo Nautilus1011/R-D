@@ -32,7 +32,7 @@ except Exception as e:
 cap = cv2.VideoCapture(0)
 
 if not cap.isOpened():
-    print("エラー：ウェブカメラを開けませんでした。")
+    print("エラー：ウェブカメラを開けませんでした")
     exit()
 
 print("\nリアルタイム物体検出開始")
@@ -94,7 +94,7 @@ try:
         prev_frame_time = curr_frame_time
 
 except KeyboardInterrupt:
-    print("\nCtrl+C が押されました。リアルタイム物体検出を修了します。")
+    print("\nCtrl+C が押されました。リアルタイム物体検出を終了します")
 except Exception as e:
     print(f"\n予期せぬエラーが発生しました:{e}")
 
