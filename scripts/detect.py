@@ -9,6 +9,7 @@ image_path = "/home/melnuts/Workspace/repo/R-D/data/images/test001.jpg"
 save_path = "/home/melnuts/Workspace/repo/R-D/runs/detect"
 
 session = onnxruntime.InferenceSession(model_path)
+# onnxファイル内部に既に定義されている名前を取得
 input_name = session.get_inputs()[0].name
 output_name = session.get_outputs()[0].name
 
@@ -19,7 +20,12 @@ input_img = resized.transpose(2, 0, 1).astype(np.float32) / 255.0
 input_tensor = np.expand_dims(input_img, axis=0)
 
 # 推論 
+# onnx runtimeでは、モデルに入力・出力を渡すとき
+# どの名前の入力に、どのテンソルを渡すか, どの名前の出力を取り出すか
+# などを明示的に指定しなければならない
 outputs = session.run([output_name], {input_name: input_tensor})[0]
+
+print(outputs)
 
 # 結果から検出ボックスを描画(簡易)
 for det in outputs[0]:
