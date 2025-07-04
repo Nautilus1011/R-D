@@ -16,4 +16,11 @@ except Exception as e:
     exit()
 
 try:
-    with open(names_path, 'r')
+    with open(names_path, 'r') as f:
+        class_names = [line.strip() for line in f.readlines()] 
+except FileNotFoundError:
+    print("エラー：クラス名ふぁるが見つからない")
+    exit()
+except Exception:
+    print("クラス名ファイルのロード中にエラーが発生")
+    exit()
