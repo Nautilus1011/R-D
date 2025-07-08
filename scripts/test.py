@@ -1,13 +1,16 @@
 import cv2
 import os
 
-save_path = "/home/melnuts/Workspace/repo/R-D/runs"
+save_path = "../runs"
 
 cap = cv2.VideoCapture(0)
 
 if not cap.isOpened():
     print("カメラが開けませんでした")
     exit()
+
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
 
 ret, frame = cap.read()
 

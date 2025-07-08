@@ -4,9 +4,9 @@ import onnxruntime
 import os
 
 # モデルとクラス名の読み込み
-model_path = "/home/melnuts/Workspace/repo/R-D/models/yolov5s.onnx"
-image_path = "/home/melnuts/Workspace/repo/R-D/data/images/test001.jpg"
-save_path = "/home/melnuts/Workspace/repo/R-D/runs/detect"
+model_path = "../models/yolov5s.onnx"
+image_path = "../data/images/test001.jpg"
+save_path = "../runs/detect"
 
 session = onnxruntime.InferenceSession(model_path)
 # onnxファイル内部に既に定義されている名前を取得

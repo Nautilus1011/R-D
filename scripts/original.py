@@ -4,8 +4,8 @@ import onnxruntime
 import time
 import os
 
-model_path = "/home/melnuts/Workspace/repo/R-D/models/yolov5s.onnx"
-names_path = "/home/melnuts/Workspace/repo/R-D/models/coco.names"
+model_path = "../models/yolov5s.onnx"
+names_path = "../models/coco.names"
 
 try:
     session = onnxruntime.InferenceSession(model_path, providers=['CPUExecutionProvider'])
