@@ -26,7 +26,7 @@ else:
     # print("frame.shape:", frame.shape)
     # print("frame.mean():", frame.mean())
 
-    cv2.imshow("取得画像", frame)
+    cv2.imshow("get_picture", frame)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
 
