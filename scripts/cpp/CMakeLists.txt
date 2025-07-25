@@ -4,9 +4,11 @@ project(RealtimeObjectDetection)
 set(CMAKE_CXX_STANDARD 17)
 
 # OpenCVを探す
+# OpenCVはfind_packageに対応しているからこれができるみたい
 find_package(OpenCV REQUIRED)
 
 # ONNX Runtimeの場所（環境に合わせてパスを書き換えてください）
+# ONNX Runtimeはまだ対応していないらしいからヘッダーファイルのパスを指定
 set(ONNXRUNTIME_DIR "/path/to/onnxruntime-linux-x64-1.18.0")  # 例
 
 include_directories(
