@@ -3,7 +3,7 @@ import numpy as np
 import onnxruntime
 import time
 
-model_path = "/home/melnuts/Workspace/repo/R-D/models/yolov5s.onnx"
+model_path = "/home/melnuts/Workspace/repo/R-D/models/onnx_weights/yolov5s.onnx"
 names_path = "/home/melnuts/Workspace/repo/R-D/models/coco.names"
 
 
